@@ -1,0 +1,13 @@
+{
+  "database": "mongo",
+  "redis": {
+    "host": "redis://redis",
+    "port": "6379",
+    "database": 0
+  },
+  "mongo": {
+    "host": "mongo",
+    "port": "27017",
+    "database": "nodebb"
+  }
+}
