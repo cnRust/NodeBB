@@ -1,4 +1,6 @@
 {
+  "url": "http://116.62.148.227",
+  "port": "4567",
   "database": "redis",
   "redis": {
     "host": "redis://redis",
