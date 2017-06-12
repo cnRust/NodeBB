@@ -2,29 +2,20 @@ version: '3'
 services:
   forum:
     build: ./
-    container_name: nodebb
+    container_name: cnRust
     ports:
       - '4567:4567'
     volumes:
       - ./data/nodebb:/var/lib/nodebb
     links:
-      - mongo
       - redis
+    restart: always
 
   redis:
     image: redis:alpine
-    container_name: nodebb-redis
+    container_name: cnRust-redis
     ports:
       - '6379:6379'
     volumes:
       - ./data/redis:/data
-    restart: always
-
-  mongo:
-    image: mongo
-    container_name: nodebb-mongo
-    ports:
-      - '27017:27017'
-    volumes:
-      - ./data/mongo:/data/db
     restart: always
