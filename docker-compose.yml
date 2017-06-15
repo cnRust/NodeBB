@@ -7,6 +7,11 @@ services:
       - redis
     ports:
       - '4567:4567'
+    environment:
+      OSS_UPLOADS_BUCKET:
+      OSS_UPLOADS_HOST:
+      OSS_UPLOADS_PATH:
+      OSS_DEFAULT_REGION:
     volumes:
       - ./data/nodebb:/var/lib/nodebb
     links:
