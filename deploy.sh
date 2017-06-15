@@ -10,7 +10,11 @@ docker build -t rustbb .
 echo "====================================cnRust======================================"
 echo ">>>>>>>>>>>>>>>>>>>>         DockerCompose Restarting...    <<<<<<<<<<<<<<<<<<<<"
 echo "================================================================================"
-docker-compose up -d --no-deps --build
+OSS_UPLOADS_BUCKET=cnrust OSS_UPLOADS_HOST=cdn.cnrust.org OSS_UPLOADS_PATH=/assets OSS_DEFAULT_REGION=oss-cn-hangzhou docker-compose up -d --no-deps --build
+echo "====================================cnRust======================================"
+echo ">>>>>>>>>>>>>>>>>>>>           Clean up images.             <<<<<<<<<<<<<<<<<<<<"
+echo "================================================================================"
+docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 echo "====================================cnRust======================================"
 echo ">>>>>>>>>>>>>>>>>>>>            Redeploy Done.              <<<<<<<<<<<<<<<<<<<<"
 echo "================================================================================"
