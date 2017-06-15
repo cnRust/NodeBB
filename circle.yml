@@ -1,0 +1,14 @@
+general:
+  branches:
+    only:
+     - master
+
+test:
+  override:
+    - echo "deploy only"
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - sh ./deploy.sh $DOCKER_USERNAME $DOCKER_PASSWORD
