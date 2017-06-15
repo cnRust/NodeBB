@@ -1,5 +1,5 @@
 {
-  "url": "http://116.62.148.227",
+  "url": "http://cnrust.org",
   "port": "4567",
   "database": "redis",
   "redis": {
