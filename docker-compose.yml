@@ -1,7 +1,7 @@
 version: '3'
 services:
   forum:
-    image: cnRustBB
+    image: rustbb
     container_name: cnRust
     ports:
       - '4567:4567'

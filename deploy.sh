@@ -5,7 +5,7 @@ git checkout master
 git pull
 
 # build rew image
-docker build -t cnRustBB .
+docker build -t rustbb .
 
 echo "====================================cnRust======================================"
 echo ">>>>>>>>>>>>>>>>>>>>         DockerCompose Restarting...    <<<<<<<<<<<<<<<<<<<<"
