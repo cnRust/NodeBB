@@ -1,7 +1,7 @@
 version: '3'
 services:
   forum:
-    image: registry.cn-hangzhou.aliyuncs.com/cn_rust/nodebb:current
+    image: cnRustBB
     container_name: cnRust
     ports:
       - '4567:4567'
