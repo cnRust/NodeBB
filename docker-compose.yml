@@ -3,6 +3,8 @@ services:
   forum:
     image: rustbb
     container_name: cnRust
+    depends_on:
+      - redis
     ports:
       - '4567:4567'
     volumes:
