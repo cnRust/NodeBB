@@ -126,7 +126,7 @@ describe('Build', function (done) {
 	before(function (done) {
 		async.parallel([
 			async.apply(rimraf, path.join(__dirname, '../build/public')),
-			async.apply(db.activatePlugin, 'nodebb-plugin-markdown'),
+			async.apply(db.activatePlugin, 'nodebb-plugin-markdown-cnrust'),
 		], done);
 	});
 

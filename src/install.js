@@ -434,7 +434,7 @@ function enableDefaultPlugins(next) {
 
 	var defaultEnabled = [
 		'nodebb-plugin-composer-default',
-		'nodebb-plugin-markdown',
+		'nodebb-plugin-markdown-cnrust',
 		'nodebb-plugin-mentions',
 		'nodebb-widget-essentials',
 		'nodebb-rewards-essentials',
