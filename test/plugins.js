@@ -11,7 +11,7 @@ var plugins = require('../src/plugins');
 
 describe('Plugins', function () {
 	it('should load plugin data', function (done) {
-		var pluginId = 'nodebb-plugin-markdown';
+		var pluginId = 'nodebb-plugin-markdown-cnrust';
 		plugins.loadPlugin(path.join(nconf.get('base_dir'), 'node_modules/' + pluginId), function (err) {
 			assert.ifError(err);
 			assert(plugins.libraries[pluginId]);
@@ -70,11 +70,11 @@ describe('Plugins', function () {
 	});
 
 	it('should get plugin data from nbbpm', function (done) {
-		plugins.get('nodebb-plugin-markdown', function (err, data) {
+		plugins.get('nodebb-plugin-markdown-cnrust', function (err, data) {
 			assert.ifError(err);
 			var keys = ['id', 'name', 'url', 'description', 'latest', 'installed', 'active', 'latest'];
-			assert.equal(data.name, 'nodebb-plugin-markdown');
-			assert.equal(data.id, 'nodebb-plugin-markdown');
+			assert.equal(data.name, 'nodebb-plugin-markdown-cnrust');
+			assert.equal(data.id, 'nodebb-plugin-markdown-cnrust');
 			keys.forEach(function (key) {
 				assert(data.hasOwnProperty(key));
 			});
@@ -177,4 +177,3 @@ describe('Plugins', function () {
 		});
 	});
 });
-
